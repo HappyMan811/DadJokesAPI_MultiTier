@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="DadJokesBusinessLogicLayer\**" />
+    <Compile Remove="DadJokesDataAccessLayer\**" />
+    <Content Remove="DadJokesBusinessLogicLayer\**" />
+    <Content Remove="DadJokesDataAccessLayer\**" />
+    <EmbeddedResource Remove="DadJokesBusinessLogicLayer\**" />
+    <EmbeddedResource Remove="DadJokesDataAccessLayer\**" />
+    <None Remove="DadJokesBusinessLogicLayer\**" />
+    <None Remove="DadJokesDataAccessLayer\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="DadJokesBusinessLogicLayer\DadJokesBusinessLogicLayer.csproj" />
+    <ProjectReference Include="DadJokesDataAccessLayer\DadJokesDataAccessLayer.csproj" />
+  </ItemGroup>
+
+</Project>
